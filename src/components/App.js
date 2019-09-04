@@ -1,6 +1,11 @@
 import React from 'react';
+import MagicCreatures from '../container/MagicCreatures';
 
 export default function App() {
-  return <h1>Hello World</h1>;
-}
-  
+  return (
+    <>
+    <h1>WOW MAGIC</h1>
+    <MagicCreatures />
+    </>
+  );
+};
