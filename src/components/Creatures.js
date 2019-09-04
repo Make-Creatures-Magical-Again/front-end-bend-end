@@ -13,10 +13,10 @@ class Creatures extends Component {
   }
 
   render() {
-    console.log('creatures', this.props.creatures);
-    const creatureElements = this.props.creatures.map(creature => (
-      <p key={creature.name}>Name: {creature.name} ~ Magic Ability: {creature.magic} ~ Pretty: {creature.pretty}</p>
-    ));
+    const creatureElements = this.props.creatures.map(creature => {
+      const bool = creature.pretty ? 'true' : 'false';
+      return <p key={creature.name}>Name: {creature.name} ~ Magic Ability: {creature.magic} ~ Pretty: {bool}</p>;
+    });
 
     return <ul>{creatureElements}</ul>;
   }
